@@ -26,4 +26,19 @@ public class AuthController {
         }
         return "Invalid credentials";
     }
+
+    @PostMapping("/register")
+    public String register(@RequestParam String email, @RequestParam String password, @RequestParam String name) {
+        if (userRepository.findByEmail(email).isPresent()) {
+            return "Email is already in use!";
+        }
+
+        User newUser = new User();
+        newUser.setEmail(email);
+        newUser.setName(name);
+        newUser.setPassword(passwordEncoder.encode(password));
+
+        userRepository.save(newUser);
+        return "Registration successful!";
+    }
 }
