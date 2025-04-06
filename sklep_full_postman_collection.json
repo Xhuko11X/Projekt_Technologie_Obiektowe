@@ -1,0 +1,322 @@
+{
+  "info": {
+    "name": "Sklep Internetowy - Wszystkie Testy API",
+    "_postman_id": "sklep-internetowy-all-tests",
+    "description": "Pe\u0142na kolekcja test\u00f3w API dla aplikacji sklepu internetowego.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth - Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/auth/register?email=jan@example.com&password=password123&name=Jan",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "auth",
+            "register"
+          ],
+          "query": [
+            {
+              "key": "email",
+              "value": "jan@example.com"
+            },
+            {
+              "key": "password",
+              "value": "password123"
+            },
+            {
+              "key": "name",
+              "value": "Jan"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/auth/login?email=jan@example.com&password=password123",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "auth",
+            "login"
+          ],
+          "query": [
+            {
+              "key": "email",
+              "value": "jan@example.com"
+            },
+            {
+              "key": "password",
+              "value": "password123"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Users - Add User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Anna\", \"email\": \"anna@example.com\", \"password\": \"pass123\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/users",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Users - Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/users",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Users - Get User by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/users/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Users - Delete User",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/users/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cart - Add Product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cart/1/add?productId=1&quantity=2",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cart",
+            "1",
+            "add"
+          ],
+          "query": [
+            {
+              "key": "productId",
+              "value": "1"
+            },
+            {
+              "key": "quantity",
+              "value": "2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cart - Get Cart",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cart/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cart",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cart - Remove Product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cart/1/remove?productId=1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cart",
+            "1",
+            "remove"
+          ],
+          "query": [
+            {
+              "key": "productId",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cart - Clear Cart",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cart/1/clear",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cart",
+            "1",
+            "clear"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Order - Place Order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/orders/user/1/place",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "orders",
+            "user",
+            "1",
+            "place"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Order - Get User Orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/orders/user/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "orders",
+            "user",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Order - Update Status",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/orders/1/status?status=PAID",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "orders",
+            "1",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "PAID"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Order - Cancel Order",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/orders/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "orders",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}

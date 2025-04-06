@@ -1,0 +1,183 @@
+{
+  "info": {
+    "name": "Sklep Internetowy - Testy API",
+    "_postman_id": "sklep-internetowy-collection-id",
+    "description": "Testy endpoint\u00f3w dla koszyka i zam\u00f3wie\u0144.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Cart - Add to Cart",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cart/1/add?productId=1&quantity=2",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cart",
+            "1",
+            "add"
+          ],
+          "query": [
+            {
+              "key": "productId",
+              "value": "1"
+            },
+            {
+              "key": "quantity",
+              "value": "2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cart - Get Cart",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cart/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cart",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cart - Remove Product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cart/1/remove?productId=1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cart",
+            "1",
+            "remove"
+          ],
+          "query": [
+            {
+              "key": "productId",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cart - Clear Cart",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/cart/1/clear",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cart",
+            "1",
+            "clear"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Order - Place Order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/orders/user/1/place",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "orders",
+            "user",
+            "1",
+            "place"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Order - Get User Orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/orders/user/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "orders",
+            "user",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Order - Update Status",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/orders/1/status?status=PAID",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "orders",
+            "1",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "PAID"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Order - Cancel Order",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/orders/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "orders",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
