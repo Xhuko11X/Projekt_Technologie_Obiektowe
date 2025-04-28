@@ -1,0 +1,25 @@
+.admin-panel {
+    padding: 20px;
+  }
+  
+  .admin-panel h2 {
+    margin-bottom: 20px;
+  }
+  
+  .admin-products, .admin-orders {
+    margin-bottom: 30px;
+  }
+  
+  .admin-products button, .admin-orders button {
+    padding: 8px 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .admin-products button:hover, .admin-orders button:hover {
+    background-color: #c0392b;
+  }
+  
