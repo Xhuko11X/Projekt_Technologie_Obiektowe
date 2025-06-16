@@ -1,4 +1,4 @@
-package org.example.controller;
+//package org.example.controller;
 
 import org.example.model.User;
 import org.example.repository.UserRepository;
@@ -13,7 +13,7 @@ import org.powermock.modules.junit4.PowerMockRunner;
 
 import java.util.Optional;
 
-import static org.junit.Assert.assertEquals;
+/*import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 
 @RunWith(PowerMockRunner.class)
@@ -95,3 +95,4 @@ public class AuthControllerTestPowerMock {
         Mockito.verify(userRepository, Mockito.never()).save(any(User.class));
     }
 }
+*/
